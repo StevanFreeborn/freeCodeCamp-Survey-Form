@@ -7,7 +7,8 @@
   <title>How was your stay?</title>
 
   <!--Font Awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
   crossorigin="anonymous" 
   referrerpolicy="no-referrer" />
 
@@ -23,7 +24,7 @@
         We Care About Your Stay!
       </h1>
       <p id="description">
-        It is import to us that you enjoyed your time and had a great experience, but we also want to know if there is anything we can do better. If you don't mind please take a few minutes to complete the short survey below.
+        It is important to us that you enjoyed your time and had a great experience, but we also want to know if there is anything we can do better. If you don't mind please take a few minutes to complete the short survey below.
       </p>
     </div>
   </header>
@@ -32,7 +33,110 @@
   <main>
     <section class="form">
       <div class="container">
+        <div class="survey-form">
+          <form  id="survey-form">
 
+            <!--Name-->
+            <div class="form-group">
+              <div>
+                <label id="name-label" for="name">Name</label>
+                <span class="clue">(Required)</span>
+              </div>
+              <div>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+              </div>
+            </div>
+
+            <!--Email-->
+            <div class="form-group">
+              <div>
+                <label id="email-label" for="email">Email</label>
+                <span class="clue">(Required)</span>
+              </div>
+              <div>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your name" required>
+              </div>
+            </div>
+
+            <!--How many nights?-->
+            <div class="form-group">
+              <div>
+                <label id="number-label" for="number">How many nights was your stay?</label>
+              </div>
+              <div>
+                <input type="number" id="number" name="number" class="form-control" min="1" max="14">
+              </div>
+            </div>
+
+            <!--How did you find us?-->
+            <div class="form-group">
+              <div>
+                <label id="dropdown-label" for="dropdown">How did you find us?</label>
+              </div>
+              <div>
+                <select id="dropdown" name="dropdown" class="form-control">
+                  <option value="social">Social Media</option>
+                  <option value="website">Website</option>
+                  <option value="search">Search Result</option>
+                  <option value="family/friend">Family/Friend</option>
+                </select>
+              </div>
+            </div>
+
+            <!--Would you recommend us to firends and family?-->
+            <div class="form-group">
+              <p>Would you recommend us to friends and family?</p>
+              <div>
+                <input id="fo-sho" type="radio" name="recommend" value="fo-sho"class="form-control">
+                <label id="fo-sho-label" for="fo-sho">Fo Sho!</label>
+              </div>
+              <div>
+                <input id="perhaps" type="radio" name="recommend" value="perhaps"class="form-control">
+                <label id="perhaps-label" for="perhaps">Perhaps</label>
+              </div>
+              <div>
+                <input id="nah-bro" type="radio" name="recommend" value="nah-bro"class="form-control">
+                <label id="nah-bro-label" for="nah-bro">Nah bro...</label>
+              </div>
+            </div>
+
+            <!--How could we have made your stay better?-->
+            <div class="form-group">
+              <p>How could we have made your stay better?
+                <span class="clue">(Check all that apply)</span>
+              </p>
+              <div>
+                <input type="checkbox" id="more-pillows" name="more-pillows" value="more-pillows">
+                <label id="more-pillows-label" for="more-pillows">More Pillows</label>
+              </div>
+              <div>
+                <input type="checkbox" id="better-coffee" name="better-coffee" value="better-coffee">
+                <label id="better-coffee-label" for="better-coffee">Better Coffee</label>
+              </div>
+              <div>
+                <input type="checkbox" id="free-breakfast" name="free-breakfast" value="free-breakfast">
+                <label id="free-breakfast-label" for="free-breakfast">Free Breakfast</label>
+              </div>
+            </div>
+
+            <!--Any other comments or suggestions?-->
+            <div class="form-group">
+              <div>
+                <label id="comments-label" for="comments">Comments/Suggestions?</label>
+              </div>
+              <div>
+                <textarea id="comments" name="comments" class="form-control" placeholder="Give 'em here" row="20"></textarea>
+              </div>
+            </div>
+
+            <!--Submit-->
+            <div class="form-group">
+              <button type="submit" class="btn">Submit</button>
+            </div>
+
+          </form>
+
+        </div>
       </div>
     </section>
   </main>
