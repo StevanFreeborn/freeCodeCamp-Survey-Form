@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How was your stay?</title>
+  <title>Thank You For Coming</title>
 
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
@@ -15,25 +15,36 @@
   <!--Site Styling-->
   <link rel="stylesheet" href="site.css">
 
+  <!--Email JS Integration-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("PeDdwkjYhwbF2-lWm");
+    })();
+  </script>
+
 </head>
 <body>
   <!--header-->
-  <header class="header">
+  <header class="header my-5">
     <div class="container">
-      <h1 id="title">
-        We Care About Your Stay!
+      <h1 id="title" class="text-center">
+        Thank You For Coming!
       </h1>
-      <p id="description">
-        It is important to us that you enjoyed your time and had a great experience, but we also want to know if there is anything we can do better. If you don't mind please take a few minutes to complete the short survey below.
-      </p>
+      <div class="header-description text-center">
+        <p id="description">
+          Tell us about your stay and how we could make it better.
+        </p>
+      </div>
     </div>
   </header>
 
   <!--main content-->
   <main>
-    <section class="form">
+    <section class="form my-5">
       <div class="container">
-        <div class="survey-form">
+        <div class="survey-form show">
+          <h3 id="submit-message" class="text-center hide">Thank you! Your survey has been submitted.</h3>
           <form  id="survey-form">
 
             <!--Name-->
@@ -75,6 +86,7 @@
               </div>
               <div>
                 <select id="dropdown" name="dropdown" class="form-control">
+                  <option selected>Select an option</option>
                   <option value="social">Social Media</option>
                   <option value="website">Website</option>
                   <option value="search">Search Result</option>
@@ -106,15 +118,15 @@
                 <span class="clue">(Check all that apply)</span>
               </p>
               <div>
-                <input type="checkbox" id="more-pillows" name="more-pillows" value="more-pillows">
+                <input type="checkbox" id="more-pillows" name="improvement" value="more-pillows">
                 <label id="more-pillows-label" for="more-pillows">More Pillows</label>
               </div>
               <div>
-                <input type="checkbox" id="better-coffee" name="better-coffee" value="better-coffee">
+                <input type="checkbox" id="better-coffee" name="improvement" value="better-coffee">
                 <label id="better-coffee-label" for="better-coffee">Better Coffee</label>
               </div>
               <div>
-                <input type="checkbox" id="free-breakfast" name="free-breakfast" value="free-breakfast">
+                <input type="checkbox" id="free-breakfast" name="improvement" value="free-breakfast">
                 <label id="free-breakfast-label" for="free-breakfast">Free Breakfast</label>
               </div>
             </div>
@@ -125,28 +137,32 @@
                 <label id="comments-label" for="comments">Comments/Suggestions?</label>
               </div>
               <div>
-                <textarea id="comments" name="comments" class="form-control" placeholder="Give 'em here" row="20"></textarea>
+                <textarea id="comments" name="comments" class="form-control" placeholder="Give 'em here"></textarea>
               </div>
             </div>
 
             <!--Submit-->
-            <div class="form-group">
-              <button type="submit" class="btn">Submit</button>
+            <div class="button text-center">
+              <button id="submit-button" type="submit" class="btn">
+                <i class="fa-solid fa-envelope"></i> Submit
+              </button>
             </div>
 
           </form>
-
         </div>
       </div>
     </section>
   </main>
 
   <!--footer-->
-  <footer class="footer">
-    <div class="container">
+  <footer class="footer my-5">
+    <div class="container text-center">
       <h3>Code by Stevan</h3>
-      <p>Copyright &copy; 2021</p>
+      <p class=>Copyright &copy; 2021</p>
     </div>
   </footer>
+
+  <script src="index.js"></script>
+
 </body>
 </html>
