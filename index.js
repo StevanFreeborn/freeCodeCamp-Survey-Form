@@ -1,8 +1,5 @@
 window.onload = function() {
     document.getElementById("name").focus();
-};
-
-window.onload = function() {
     document.getElementById('survey-form').addEventListener('submit', function(event) {
         event.preventDefault();
         emailjs.sendForm('gmail-service', 'survey-form-template', this)
